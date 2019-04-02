@@ -36,7 +36,7 @@
         //TODO
         if (value == 1)
         {
-            return;
+            return value;
         }
 
 
@@ -49,8 +49,7 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         //TODO
-
-        return value * factorial(n-1);
+        return value * factorial(value - 1);
 
     }
 
@@ -73,7 +72,18 @@
     public int fibonacci(int n)
     {
         //TODO
-	    return 0;
+        if(n == 0)
+		{
+	        return 0;
+		}
+	    else if(n == 1)
+	    {
+	      return 1;
+	    }
+	   else
+	   {
+	      return fibonacci(n - 1) + fibonacci(n - 2);
+	   }
     }
 
     
@@ -107,7 +117,7 @@
         public Tree(int value)
         {
     	    //TODO
-	    return null;
+	    //return null;
         }
     
         public int getValue()
@@ -119,7 +129,7 @@
         public ArrayList<Tree> getChildren()
         {
     	    //TODO
-	    return null;	
+	        return children;	
         }
     
         public void add(Tree child)
