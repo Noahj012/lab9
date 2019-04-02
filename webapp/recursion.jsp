@@ -13,8 +13,8 @@
      * This lab tests your ability to implement recursion for several functions.
      * 
      * @authors: Stephen, Mukhtar, MoSho
-     * @editer: YOUR_NAME_HERE
-     * @version DATE_HERE
+     * @editer: Noah Pierce
+     * @version 4/1/19
      */
 
     /** **********************************************************************
@@ -34,7 +34,10 @@
          * This lets our recursion know when to stop.
          */
         //TODO
-        
+        if (value == 1)
+        {
+            return;
+        }
 
 
         /*
@@ -46,7 +49,8 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         //TODO
-        return 0;
+
+        return value * factorial(n-1);
 
     }
 
